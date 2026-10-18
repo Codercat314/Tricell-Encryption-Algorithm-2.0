@@ -1,0 +1,27 @@
+function kryptera_meddelande($message, $key){
+    //gör en array med en bokstav per element
+    $messageArray = split("", $message)
+    $newArrayWMessage = []
+
+    foreach($messageArray as $character){
+        $asciiValue = getAsciiValue($character)
+        $newAsciiValue = $asciiValue + $key
+
+        //lägg till bokstaven till den nya arrayn
+        $newArrayWMessage[] = convertToCharacterFromAcsii($newAsciiValue)
+
+    }
+
+    $newArrayWMessage = array_reverse($newArrayWMessage)
+    $newMessage = implode($newArrayWMessage)
+
+    return $newMessage
+
+}
+
+$meddelande_att_kryptera = "Katt"
+$key_from_env = env("secretKey") //eller typ 153
+
+$nytt_meddelande = kryptera_meddelande($meddelande_att_kryptera, $key_from_env)
+
+
