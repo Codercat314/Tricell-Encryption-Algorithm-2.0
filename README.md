@@ -13,3 +13,7 @@ Det här repot tillhör ett projekt på högskolenivå med målet att lära oss 
 * kör filen med "php .\encryption.php"
 * PHP 8.3.6 ska fungera
 * Alternativt kan man köra den med coderunner i visual studio code
+
+## Gruppmedlemmar
+* Edsel
+* Enola
